@@ -1,6 +1,0 @@
-/* This file is identical to the original. */
-.handContainer { color: white; display: flex; align-items: center; flex-direction: column; margin: 0.5em; min-height: 290px; }
-.cardContainer { display: flex; justify-content: center; flex-wrap: wrap; }
-.title { text-align: center; }
-@media screen and (max-width: 992px) { .handContainer { min-height: 210px; } }
-@media screen and (max-width: 600px) { .handContainer { min-height: 130px; } .title { font-size: 150%; } }
