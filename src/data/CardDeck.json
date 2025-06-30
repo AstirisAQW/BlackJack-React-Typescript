@@ -2,211 +2,211 @@
   "cards": [
     {
       "CardValue": "A",
-      "CardSuit": "spades"
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "A",
-      "CardSuit": "diamonds"
+      "CardValue": "A",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "A",
-      "CardSuit": "clubs"
+      "CardValue": "A",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "A",
-      "CardSuit": "hearts"
+      "CardValue": "A",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "2",
-      "CardSuit": "spades"
+      "CardValue": "2",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "2",
-      "CardSuit": "diamonds"
+      "CardValue": "2",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "2",
-      "CardSuit": "clubs"
+      "CardValue": "2",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "2",
-      "CardSuit": "hearts"
+      "CardValue": "2",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "3",
-      "CardSuit": "spades"
+      "CardValue": "3",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "3",
-      "CardSuit": "diamonds"
+      "CardValue": "3",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "3",
-      "CardSuit": "clubs"
+      "CardValue": "3",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "3",
-      "CardSuit": "hearts"
+      "CardValue": "3",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "4",
-      "CardSuit": "spades"
+      "CardValue": "4",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "4",
-      "CardSuit": "diamonds"
+      "CardValue": "4",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "4",
-      "CardSuit": "clubs"
+      "CardValue": "4",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "4",
-      "CardSuit": "hearts"
+      "CardValue": "4",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "5",
-      "CardSuit": "spades"
+      "CardValue": "5",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "5",
-      "CardSuit": "diamonds"
+      "CardValue": "5",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "5",
-      "CardSuit": "clubs"
+      "CardValue": "5",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "5",
-      "CardSuit": "hearts"
+      "CardValue": "5",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "6",
-      "CardSuit": "spades"
+      "CardValue": "6",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "6",
-      "CardSuit": "diamonds"
+      "CardValue": "6",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "6",
-      "CardSuit": "clubs"
+      "CardValue": "6",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "6",
-      "CardSuit": "hearts"
+      "CardValue": "6",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "7",
-      "CardSuit": "spades"
+      "CardValue": "7",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "7",
-      "CardSuit": "diamonds"
+      "CardValue": "7",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "7",
-      "CardSuit": "clubs"
+      "CardValue": "7",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "7",
-      "CardSuit": "hearts"
+      "CardValue": "7",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "8",
-      "CardSuit": "spades"
+      "CardValue": "8",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "8",
-      "CardSuit": "diamonds"
+      "CardValue": "8",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "8",
-      "CardSuit": "clubs"
+      "CardValue": "8",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "8",
-      "CardSuit": "hearts"
+      "CardValue": "8",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "9",
-      "CardSuit": "spades"
+      "CardValue": "9",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "9",
-      "CardSuit": "diamonds"
+      "CardValue": "9",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "9",
-      "CardSuit": "clubs"
+      "CardValue": "9",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "9",
-      "CardSuit": "hearts"
+      "CardValue": "9",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "10",
-      "CardSuit": "spades"
+      "CardValue": "10",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "10",
-      "CardSuit": "diamonds"
+      "CardValue": "10",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "10",
-      "CardSuit": "clubs"
+      "CardValue": "10",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "10",
-      "CardSuit": "hearts"
+      "CardValue": "10",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "J",
-      "CardSuit": "spades"
+      "CardValue": "J",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "J",
-      "CardSuit": "diamonds"
+      "CardValue": "J",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "J",
-      "CardSuit": "clubs"
+      "CardValue": "J",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "J",
-      "CardSuit": "hearts"
+      "CardValue": "J",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "Q",
-      "CardSuit": "spades"
+      "CardValue": "Q",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "Q",
-      "CardSuit": "diamonds"
+      "CardValue": "Q",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "Q",
-      "CardSuit": "clubs"
+      "CardValue": "Q",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "Q",
-      "CardSuit": "hearts"
+      "CardValue": "Q",
+      "CardSuit": "Hearts"
     },
     {
-      "CArdValue": "K",
-      "CardSuit": "spades"
+      "CardValue": "K",
+      "CardSuit": "Spades"
     },
     {
-      "CArdValue": "K",
-      "CardSuit": "diamonds"
+      "CardValue": "K",
+      "CardSuit": "Diamonds"
     },
     {
-      "CArdValue": "K",
-      "CardSuit": "clubs"
+      "CardValue": "K",
+      "CardSuit": "Clubs"
     },
     {
-      "CArdValue": "K",
-      "CardSuit": "hearts"
+      "CardValue": "K",
+      "CardSuit": "Hearts"
     }
   ]
 }
