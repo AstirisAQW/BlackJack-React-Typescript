@@ -1,4 +1,4 @@
-import { Card } from "../entity/CardEntity";
+import { Card } from "../entity/Card";
 
 export function CalculateScore(hand: Card[]): number{
     let TotalScore = 0;

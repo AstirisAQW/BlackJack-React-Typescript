@@ -1,4 +1,4 @@
-import { Card } from "../entity/CardEntity";
+import { Card } from "../entity/Card";
 import { CalculateScore } from "./CalculateScore";
 
 export function DealerLogic(DealerHand: Card[], deck: Card[]): { FinalHand: Card[], UpdatedDeck: Card[] }{
