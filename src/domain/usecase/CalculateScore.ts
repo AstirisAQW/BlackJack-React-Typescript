@@ -2,6 +2,7 @@ import { Card } from "../entity/Card";
 
 export function CalculateScore(hand: Card[]): number{
     let TotalScore = 0;
+    const Aces: Card[] = [];
 
     hand.forEach((CardInHand) => {
         if(CardInHand.isCardHidden) return;
@@ -14,8 +15,6 @@ export function CalculateScore(hand: Card[]): number{
             TotalScore += Number(CardInHand.CardValue);
         }
     });
-
-    const Aces: Card[] = [];
 
     Aces.forEach(() =>{
         if (TotalScore + 11 > 21){
