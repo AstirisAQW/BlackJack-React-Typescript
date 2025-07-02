@@ -1,9 +1,16 @@
-import { Card } from "./CardEntity";
+import { Card } from "./Card";
+
+export type GamePhase = 'StartGame' | 'StopGame';
+export type GameMessage = 'Tie!' | 'Bust!' | 'You Win!' | 'Dealer Wins!' |'';
+
 
 export interface GameState{
-    deck: Card[];
+    CardDeck: Card[];
+    ShuffledCardDeckCount: number;
     PlayerHand: Card[];
     DealerHand: Card[];
     PlayerScore: number;
     DealerScore: number;
+    GamePhase: GamePhase;
+    GameMessage: GameMessage;
 }
