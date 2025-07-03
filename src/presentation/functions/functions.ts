@@ -24,7 +24,7 @@ export const useBlackJackGame = () => {
             ...prev,
             CardDeck: CardDeck.getShuffledCardDeck(),
             ShuffledCardDeckCount: 1
-         }));
+        }));
     }, []);
 
     const startGame = useCallback(() => {
@@ -32,7 +32,6 @@ export const useBlackJackGame = () => {
             let deck = [...currentState.CardDeck];
             let shuffleCount = currentState.ShuffledCardDeckCount;
 
-            // Reshuffle if deck is low
             if (deck.length < 15) {
                 deck = CardDeck.getShuffledCardDeck();
                 shuffleCount++;
@@ -44,7 +43,7 @@ export const useBlackJackGame = () => {
             const dealerCard2 = deck.pop()!;
 
             return {
-                ...INITIAL_STATE, // Reset scores, hands, messages
+                ...INITIAL_STATE,
                 CardDeck: deck,
                 ShuffledCardDeckCount: shuffleCount,
                 PlayerHand: [playerCard1, playerCard2],
@@ -94,7 +93,6 @@ export const useBlackJackGame = () => {
         setGameState(INITIAL_STATE);
     }, []);
 
-    // Effect to calculate scores whenever hands change
     useEffect(() => {
         const newPlayerScore = CalculateScore(GameState.PlayerHand);
         const newDealerScore = CalculateScore(GameState.DealerHand);
@@ -106,38 +104,58 @@ export const useBlackJackGame = () => {
             }));
         }
     }, [GameState.PlayerHand, GameState.DealerHand, GameState.PlayerScore, GameState.DealerScore]);
-
-    // Effect to check for player bust
+    
     useEffect(() => {
         if (GameState.GamePhase !== 'StartGame') return;
+        if (GameState.PlayerScore <= 21) return;
 
-        if (GameState.PlayerScore > 21) {
-            setGameState(prev => ({
-                ...prev,
-                GamePhase: 'StopGame',
-                GameMessage: 'Bust!'
-            }));
-        }
+        const revealedDealerHand = GameState.DealerHand.map(card => ({
+            ...card,
+            isCardHidden: false,
+        }));
+
+        setGameState(prev => ({
+            ...prev,
+            DealerHand: revealedDealerHand,
+            GamePhase: 'StopGame',
+            GameMessage: 'Bust!',
+        }));
     }, [GameState.PlayerScore, GameState.GamePhase]);
 
     useEffect(() => {
-        if (GameState.GamePhase !== 'StopGame' || GameState.GameMessage) return;
+        if (GameState.GamePhase !== 'StopGame') return;
 
-        const { PlayerScore, DealerScore } = GameState;
+        const revealedDealerHand = GameState.DealerHand.map(card => ({
+            ...card,
+            isCardHidden: false,
+        }));
 
-        setGameState(prev => {
-            if (DealerScore > 21 || (PlayerScore <= 21 && PlayerScore > DealerScore)) {
-                return { ...prev, GameMessage: 'You Win!' };
-            }
-            if (DealerScore > PlayerScore) {
-                return { ...prev, GameMessage: 'Dealer Wins!' };
-            }
-            if (DealerScore === PlayerScore) {
-                 return { ...prev, GameMessage: 'Tie!' };
-            }
-            return prev;
-        });
-    }, [GameState.GamePhase, GameState.GameMessage, GameState.PlayerScore, GameState.DealerScore]);
+        const playerScore = CalculateScore(GameState.PlayerHand);
+        const dealerScore = CalculateScore(revealedDealerHand);
+
+        let result: GameState['GameMessage'] = '';
+
+        if (playerScore > 21) {
+            result = 'Bust!';
+        } else if (dealerScore > 21) {
+            result = 'You Win!';
+        } else if (playerScore > dealerScore) {
+            result = 'You Win!';
+        } else if (dealerScore > playerScore) {
+            result = 'Dealer Wins!';
+        } else {
+            result = 'Tie!';
+        }
+
+        setGameState(prev => ({
+            ...prev,
+            DealerHand: revealedDealerHand,
+            PlayerScore: playerScore,
+            DealerScore: dealerScore,
+            GameMessage: result,
+        }));
+    }, [GameState.GamePhase]);
+
 
     return { GameState, startGame, hit, stand, exit };
 };
