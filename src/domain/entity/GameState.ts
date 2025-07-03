@@ -1,7 +1,7 @@
 import { Card } from "./Card";
 
-export type GamePhase = 'StartGame' | 'StopGame';
-export type GameMessage = 'Tie!' | 'Bust!' | 'You Win!' | 'Dealer Wins!' |'';
+export type GamePhase = 'StartGame' | 'StopGame' | '';
+export type GameMessage = 'Tie!' | 'Bust!' | 'You Win!' | 'Dealer Wins!' | '';
 
 
 export interface GameState{

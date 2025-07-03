@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { GameState } from "../../domain/entity/GameState";
-import { CardDeck as DeckService } from "../../data/CardDeck";
+import { CardDeck } from "../../data/CardDeck";
 import { DealerLogic } from "../../domain/usecase/DealerLogic";
 import { CalculateScore } from "../../domain/usecase/CalculateScore";
 
@@ -11,7 +11,7 @@ const INITIAL_STATE: GameState = {
     DealerHand: [],
     PlayerScore: 0,
     DealerScore: 0,
-    GamePhase: 'StopGame',
+    GamePhase: '',
     GameMessage: '',
 };
 
@@ -22,7 +22,7 @@ export const useBlackJackGame = () => {
     useEffect(() => {
         setGameState(prev => ({
             ...prev,
-            CardDeck: DeckService.getShuffledCardDeck(),
+            CardDeck: CardDeck.getShuffledCardDeck(),
             ShuffledCardDeckCount: 1
          }));
     }, []);
@@ -34,7 +34,7 @@ export const useBlackJackGame = () => {
 
             // Reshuffle if deck is low
             if (deck.length < 15) {
-                deck = DeckService.getShuffledCardDeck();
+                deck = CardDeck.getShuffledCardDeck();
                 shuffleCount++;
             }
 
@@ -90,6 +90,10 @@ export const useBlackJackGame = () => {
         });
     }, [GameState.GamePhase]);
 
+    const exit = useCallback(() => {
+        setGameState(INITIAL_STATE);
+    }, []);
+
     // Effect to calculate scores whenever hands change
     useEffect(() => {
         const newPlayerScore = CalculateScore(GameState.PlayerHand);
@@ -116,7 +120,6 @@ export const useBlackJackGame = () => {
         }
     }, [GameState.PlayerScore, GameState.GamePhase]);
 
-    // Effect to determine the winner after the game has stopped
     useEffect(() => {
         if (GameState.GamePhase !== 'StopGame' || GameState.GameMessage) return;
 
@@ -124,10 +127,10 @@ export const useBlackJackGame = () => {
 
         setGameState(prev => {
             if (DealerScore > 21 || (PlayerScore <= 21 && PlayerScore > DealerScore)) {
-                return { ...prev, GameMessage: 'You Win!' }; // FIX: Corrected string
+                return { ...prev, GameMessage: 'You Win!' };
             }
             if (DealerScore > PlayerScore) {
-                return { ...prev, GameMessage: 'Dealer Wins!' }; // FIX: Corrected string
+                return { ...prev, GameMessage: 'Dealer Wins!' };
             }
             if (DealerScore === PlayerScore) {
                  return { ...prev, GameMessage: 'Tie!' };
@@ -136,5 +139,5 @@ export const useBlackJackGame = () => {
         });
     }, [GameState.GamePhase, GameState.GameMessage, GameState.PlayerScore, GameState.DealerScore]);
 
-    return { GameState, startGame, hit, stand };
+    return { GameState, startGame, hit, stand, exit };
 };

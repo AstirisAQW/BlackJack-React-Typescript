@@ -6,12 +6,11 @@ import { Result } from "./components/Result";
 import "../App.css"
 
 export function BlackJackPage() {
-const { GameState, startGame, hit, stand } = useBlackJackGame();
+const { GameState, startGame, hit, stand, exit } = useBlackJackGame();
 const isGameActive = GameState.GamePhase === 'StartGame';
 const isGameOver = GameState.GamePhase === 'StopGame' && GameState.GameMessage !== '';
 return (
     <div className="blackjack-page">
-
         
         <Result message={GameState.GameMessage} />
         
@@ -37,8 +36,8 @@ return (
             onStart={startGame}
             onHit={hit}
             onStand={stand}
+            onExit={exit}
         />
     </div>
 );
-
 }
