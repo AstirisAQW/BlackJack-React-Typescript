@@ -14,7 +14,7 @@ export const CardDeck = {
   getShuffledCardDeck: (): Card[] => {
     const CardDeck: Card[] = (DeckData.cards as Card[]).map(card => ({
       ...card,
-      hidden: false,
+      isCardHidden: false,
     }));
     return ShuffleCardDeck(CardDeck);
   },
