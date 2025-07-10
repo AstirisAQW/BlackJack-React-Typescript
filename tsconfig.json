@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/presentation/components/.tsx"  ]
 }
