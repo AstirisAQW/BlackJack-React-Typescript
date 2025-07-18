@@ -8,7 +8,7 @@ interface ResultProps {
 
 export const Result: React.FC<ResultProps> = ({ message }) => {
     if (!message) {
-        return <div className="result"></div>; // Keep space
+        return <div className="result"></div>;
     }
     return (
         <div className="result">
